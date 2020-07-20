@@ -1,0 +1,33 @@
+
+{%if saved%}
+        <div id="modal" class="point">
+        <div class="content">
+        <img src="/assets/check.svg" alt="Cadastro concluido">
+        <h1>Cadastro concluido</h1>
+        </div>
+        </div>
+
+
+        <script>
+        setTimeout(() => {
+        window.location = "/"
+        }, 2000)
+        </script>    
+{%endif%}
+
+{%if nosaved%}
+        <div id="modal" class="point">
+        <div class="content">
+        <h1>[ERRO]</h1>
+        <h1>Cadastro não efetuado</h1>
+        <h1>Tente novamente</h1>
+        </div>
+        </div>
+
+
+        <script>
+        setTimeout(() => {
+        window.location = "/create-point"
+        }, 2000)
+        </script>    
+{%endif%}
